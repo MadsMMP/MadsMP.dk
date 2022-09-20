@@ -1,0 +1,120 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 26/11/2019 06:55
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-shopping-bag:before { content: "\f100"; }
+.flaticon-search:before { content: "\f101"; }
+.flaticon-avatar:before { content: "\f102"; }
+.flaticon-credit-card:before { content: "\f103"; }
+.flaticon-pathway:before { content: "\f104"; }
+.flaticon-research:before { content: "\f105"; }
+.flaticon-diagram:before { content: "\f106"; }
+.flaticon-value:before { content: "\f107"; }
+.flaticon-value-1:before { content: "\f108"; }
+.flaticon-courthouse:before { content: "\f109"; }
+.flaticon-mobile-app:before { content: "\f10a"; }
+.flaticon-location:before { content: "\f10b"; }
+.flaticon-play-button:before { content: "\f10c"; }
+.flaticon-startup:before { content: "\f10d"; }
+.flaticon-add:before { content: "\f10e"; }
+.flaticon-right-arrow:before { content: "\f10f"; }
+.flaticon-quote:before { content: "\f110"; }
+.flaticon-playstore:before { content: "\f111"; }
+.flaticon-apple-logo:before { content: "\f112"; }
+.flaticon-placeholder:before { content: "\f113"; }
+.flaticon-phone-call:before { content: "\f114"; }
+.flaticon-play-button-1:before { content: "\f115"; }
+.flaticon-quotation-mark:before { content: "\f116"; }
+.flaticon-paper-plane:before { content: "\f117"; }
+.flaticon-speech-bubble:before { content: "\f118"; }
+.flaticon-up-arrow:before { content: "\f119"; }
+.flaticon-whiteboard:before { content: "\f11a"; }
+.flaticon-loupe:before { content: "\f11b"; }
+.flaticon-plan:before { content: "\f11c"; }
+.flaticon-promotion:before { content: "\f11d"; }
+.flaticon-woman:before { content: "\f11e"; }
+.flaticon-security:before { content: "\f11f"; }
+.flaticon-collaboration:before { content: "\f120"; }
+.flaticon-pdf-file-format-symbol:before { content: "\f121"; }
+.flaticon-doc:before { content: "\f122"; }
+.flaticon-smartphone:before { content: "\f123"; }
+.flaticon-left-quote:before { content: "\f124"; }
+.flaticon-tick:before { content: "\f125"; }
+.flaticon-emails:before { content: "\f126"; }
+.flaticon-contact:before { content: "\f127"; }
+    
+    $font-Flaticon-shopping-bag: "\f100";
+    $font-Flaticon-search: "\f101";
+    $font-Flaticon-avatar: "\f102";
+    $font-Flaticon-credit-card: "\f103";
+    $font-Flaticon-pathway: "\f104";
+    $font-Flaticon-research: "\f105";
+    $font-Flaticon-diagram: "\f106";
+    $font-Flaticon-value: "\f107";
+    $font-Flaticon-value-1: "\f108";
+    $font-Flaticon-courthouse: "\f109";
+    $font-Flaticon-mobile-app: "\f10a";
+    $font-Flaticon-location: "\f10b";
+    $font-Flaticon-play-button: "\f10c";
+    $font-Flaticon-startup: "\f10d";
+    $font-Flaticon-add: "\f10e";
+    $font-Flaticon-right-arrow: "\f10f";
+    $font-Flaticon-quote: "\f110";
+    $font-Flaticon-playstore: "\f111";
+    $font-Flaticon-apple-logo: "\f112";
+    $font-Flaticon-placeholder: "\f113";
+    $font-Flaticon-phone-call: "\f114";
+    $font-Flaticon-play-button-1: "\f115";
+    $font-Flaticon-quotation-mark: "\f116";
+    $font-Flaticon-paper-plane: "\f117";
+    $font-Flaticon-speech-bubble: "\f118";
+    $font-Flaticon-up-arrow: "\f119";
+    $font-Flaticon-whiteboard: "\f11a";
+    $font-Flaticon-loupe: "\f11b";
+    $font-Flaticon-plan: "\f11c";
+    $font-Flaticon-promotion: "\f11d";
+    $font-Flaticon-woman: "\f11e";
+    $font-Flaticon-security: "\f11f";
+    $font-Flaticon-collaboration: "\f120";
+    $font-Flaticon-pdf-file-format-symbol: "\f121";
+    $font-Flaticon-doc: "\f122";
+    $font-Flaticon-smartphone: "\f123";
+    $font-Flaticon-left-quote: "\f124";
+    $font-Flaticon-tick: "\f125";
+    $font-Flaticon-emails: "\f126";
+    $font-Flaticon-contact: "\f127";

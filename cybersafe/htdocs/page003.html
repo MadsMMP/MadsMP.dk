@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="YR10 CyberSecurity game">
+        <meta name="author" content="Gabriel Pavlov">
+        <title>CyberSafe - Cyber Quiz</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+ 
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-primary storyline" role="alert">
+                        <p>Du er ved at lave en rapport til direktøren.</p>
+                        <p>Lige pludselig modtager du en email... Trykker du på linket?</p>
+                        <br>
+                        <p>Hvis du ikke har du ikke lyst til at "få" en ny iphone. Så kan du gemme rapporten og sende den videre til direktøren og komme videre med dagen.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="#">RAPPORT</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link save-report" href="#" class="button">Gem</a> 
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link share-report" href="#">Send</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link delete-report" href="#">Slet</a>
+                            </li>
+                          </ul>
+                          <form class="form-inline my-2 my-lg-0">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">MAIL</button>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Søg" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SØG</button>
+                          </form>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                  <table class="table report">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Navn</th>
+                        <th scope="col">Efternavn</th>
+                        <th scope="col">Brugernavn</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td> 
+                        <td>Hansen</td>
+                        <td>markh@cybersafe.dk</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Pedersen</td>
+                        <td>jacobp@cybersafe.dk</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Peter</td>
+                        <td>Jensen</td>
+                        <td>peterj@cybersafe.dk</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-4 toasts">
+                    <!-- toasts go here from JS -->
+                    
+                </div>
+            </div>         
+        </div>
+        <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+        <script>
+          $(document).ready(function() {
+
+            var _boss = 'Mads';
+            var _ceo = 'Philip';
+
+            var _reportWasSaved = false;
+            var _sharedBadReport = false;
+            var _reportWasSent = false;
+            var _reportWasDeleted = false;
+            var _toastCnt = 10;
+
+            var createToast = function(clazz, subject, body) {
+              $('.toasts').append(
+              '<div class="toast ' + clazz + '" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">' + 
+                    '<div class="toast-header">' + 
+                      '<strong class="mr-auto">' + subject + '</strong>' + 
+                      '<small>' + new Date().toTimeString().slice(0,8) + '</small>' + 
+                      '<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">' + 
+                        '<span aria-hidden="true">&times;</span>' + 
+                      '</button>' + 
+                    '</div>' + 
+                    '<div class="toast-body">' + body + 
+                    '</div>' + 
+                  '</div>');
+                $('.toast' + _toastCnt).toast('show');
+                _toastCnt++;
+            }
+
+            var updateStoryLine = function(text) {
+              $('.storyline').html(text);
+            }
+
+            var _t1 = _toastCnt
+            createToast('toast' + _t1, 'fake@konkurrencer.dk: Du er den heldige vinder!', 'Tillykke Rasmus! Du har vundet den helt nye IPHONE 14 PRO MAX, ' + 
+                      'for at modtage din præmie så skal du <a  href="page100.html">log ind her</a> og indtaste din personlige oplysninger.');
+            
+            $('.toast' + _t1 + ' .close').click(function() {
+              
+              createToast('toast' + _toastCnt, _boss + ': Rapport', 'Hej Rasmus,' + 
+              ' Deadlinen for rapporten er denne aften, jeg forventer den er færdig der!');
+              
+              if (!_reportWasSent) {
+                setTimeout(function() {
+
+                  createToast('toast' + _toastCnt, _ceo + ': Rasmus hvor bliver min rapport af??????', 
+                  'Ramus hvor er den rapport?????? Jeg skal bruge den!!' + 
+                        (_reportWasDeleted ? '<a class="btn btn-danger" href="page100.html">Fortæl ham du slettede den</a>' : '')
+                  );
+
+                  updateStoryLine('<p>Millioner af tanker kører gennem din hjerne... Jeg tror ​​rapporten er færdig... Den kan sendes nu...</p>');
+                  
+                }, 4000);
+              }
+              
+            });
+
+            $('.delete-report').click(function() {
+              _reportWasDeleted = true;
+              $('.report').remove();
+              $('.share-report').remove();
+              $('.save-report').html('Ny');
+
+              if (!_reportWasSent) {
+                setTimeout(function() {
+
+                  updateStoryLine('<p>Rapporterne du har arbejdet på den sidste uge er gået forsvundet...</p>');
+
+                  createToast('toast' + _toastCnt, _ceo + ': Hey Rasmus hvor er den rapport??????', 
+                  'Hej Rasmus hvor er den der rapport henne?? Jeg skal bruge den!<br/>' + 
+                        (_reportWasDeleted ? '<a class="btn btn-danger" href="page103.html">Fortæl ham at du har slettet den</a>' : '')
+                  );
+
+                  }, 2000);
+              };
+            })
+
+            $('.save-report').click(function() {
+              if (_reportWasDeleted) {
+                return;
+              }
+              var _that = $(this);
+              _that.html('Gemmer....');
+              setTimeout(function() {
+                _that.html('Gemt');
+                _reportWasSaved = true;
+               }, 2000);
+            })
+            $('.share-report').click(function() {
+
+              if (_reportWasSent) {
+                return;
+              }
+
+              _toastCnt++;
+
+              var _subject = '';
+              var _body = '';
+
+              if (_reportWasSaved) {
+                if (_sharedBadReport) {
+                  _subject = 'Det ser bedre ud!';
+                  _body = 'Ok Rasmus, denne rapport ser bedre ud, men du skal være forsigtig med forhastet fildeling';
+                } else {
+                  _subject = 'Godt klaret Rasmus!';
+                  _body = 'Godt klaret rasmus! Det er lige hvad jeg skulle bruge';
+                }
+                _reportWasSent = true;
+              } else {
+                _subject = 'Rasmus Rapporten ser mærkelig ud!!!!!';
+                  _body = 'Hej Rasmus, hvad sker der? Jeg modtog rapportfilen og halvdelen af ​​den er tom. ' +
+                  ' Den har også nogle følsomme data fra vores tidligere medarbejder. Har du glemt at gemme det bagefter? ' + 
+                  ' Du kan hente den der skabelon vis det er?';
+                _sharedBadReport = true;
+              }
+              
+              setTimeout(function() {
+                createToast('toast' + _toastCnt, _ceo + ': ' + _subject,  _body);
+
+                if (_reportWasSent) {
+                  setTimeout(function() {
+                    createToast('toast' + _toastCnt, 'Daniel' + ': ' +  'Frokost',  'Hej Rasmus, vil du med mig ud og spise frokost?<br/>' + 
+                    '<a class="btn btn-secondary" href="page004.html">Hold frokostpause</a>');
+
+                  }, 3000);
+
+                }
+
+               }, 2000);
+
+
+            });
+          });
+        </script>
+    </body>
+</html>

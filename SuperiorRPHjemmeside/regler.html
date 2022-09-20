@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SuperiorRP</title>
+    <!-- fontawesome css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <!-- flaticon css -->
+    <link rel="stylesheet" href="assets/font/flaticon.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- nice-select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swipper css link -->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/banner/fav.png" type="image/x-icon">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- datepicker.css -->
+    <link rel="stylesheet" href="assets/css/datepicker.min.css">
+    <!-- odometer css -->
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <!-- main style css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive css link -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body >
+
+    <style>
+        .rule-category {
+            margin: 15px 15px; /* Making sure to keep some distance from all side */
+            box-shadow: 3px 2px rgba(0,0,0, 0.25);
+        }
+
+        .rule-category p {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 15px;
+        }
+
+        .rule-category li {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+        }
+
+        
+
+        .oaerror {
+            width: 100%; /* Configure it fit in your design  */
+            margin: 0 auto; /* Centering Stuff */
+            background-color: #ebebeb; /* Default background */
+            padding: 20px;
+            border: 1px solid #eee;
+            border-left-width: 10px;
+            border-radius: 3px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+        }
+
+        .oaerror h5 {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .danger hr {
+            background: #d9534f;
+        }
+
+        .danger {
+            border-left-color: #d9534f; /* Left side border color */
+        }
+
+        .warning hr {
+            background: #f0ad4e;
+        }
+
+        .warning {
+            border-left-color: #f0ad4e;
+        }
+
+        .info hr {
+            background: #5bc0de;
+        }
+
+        .info {
+            border-left-color: #5bc0de;
+        }
+
+        .success hr {
+            background: #2b542c;
+        }
+
+        .success {
+            border-left-color: #2b542c;
+        }
+
+        .socialrp hr {
+            background: #FF9900;
+        }
+
+        .socialrp {
+            border-left-color: #FF9900;
+        }
+
+        .sort hr {
+            background: #000000;
+        }
+
+        .sort {
+            border-left-color: #000000;
+        }
+
+        .gult hr {
+            background: #FFD700;
+        }
+
+        .gult {
+            border-left-color: #FFD700;
+        }
+
+        .lightgreen hr {
+            background: #ADFF2F;
+        }
+
+        .lightgreen {
+            border-left-color: #ADFF2F;
+        }
+
+
+
+        .darkred hr {
+            border-left-color: #631100;
+        }
+
+        .darkred {
+            border-left-color: #631100;
+        }
+
+
+
+        .brown hr {
+            background: #8B4513;
+        }
+
+        .brown {
+            border-left-color: #8B4513;
+        }
+
+        .rosybrown hr {
+            background: rosybrown;
+        }
+
+        .rosybrown {
+            border-left-color: rosybrown;
+        }
+
+        .pink hr {
+            background: #FF66FF;
+        }
+
+        .pink {
+            border-left-color: #FF66FF;
+        }
+
+        .orange hr {
+            background: #c97a57;
+        }
+
+        .orange {
+            border-left-color: #c97a57;
+        }
+
+        .grey hr {
+            background: #737373;
+        }
+
+        .grey {
+            border-left-color: #737373;
+        }
+
+        .greenb hr {
+            background: #00a3aa;
+        }
+
+        .greenb {
+            border-left-color: #00a3aa;
+        }
+
+        .topbox {
+            padding: 15px;
+            background-color: #343a40;
+            border-radius: 10px;
+            border: 3px solid #343a40;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Categories */
+        .category, .category:visited, .category:hover, .category:active {
+            margin: 8px;
+            padding: 8px;
+            background-color: grey;
+            border-radius: 4px;
+
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            box-shadow: 3px 3px rgba(0,0,0, 0.35);
+        }
+
+        @media  only screen and (max-width: 768px) {
+            .category {
+                flex-grow: 1;
+            }
+        }
+
+        .category.orange {
+            background-color: orange;
+        }
+
+        .category.red {
+            background-color: #d9534f;
+        }
+
+        .category.darkred {
+            background-color: #631100;
+        }
+
+        .category.rosybrown {
+            background-color: rosybrown;
+        }
+
+        .category.blue {
+            background-color: #5bc0de;
+        }
+
+        .category.orange2 {
+            background-color: #f0ad4e;
+        }
+
+        .category.darkgreen {
+            background-color: #2b542c;
+        }
+
+        .category.black {
+            background-color: black;
+        }
+
+        .category.yellow {
+            background-color: #FFD700;
+        }
+
+        .category.lightgreen {
+            background-color: #ADFF2F;
+        }
+
+        .category.brown {
+            background-color: #8B4513;
+        }
+
+        .category.pink {
+            background-color: #FF66FF;
+        }
+
+        .category.brass {
+            background-color: #c97a57;
+        }
+
+        .category.grey {
+            background-color: #737373;
+        }
+
+        .category.bondiblue {
+            background-color: #00a3aa;
+        }
+
+        #scrollup {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #2C2F33; /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 15px; /* Increase font size */
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: 'Segoe UI', serif;
+        }
+
+        #scrollup:hover {
+            background-color: #555; /* Add a dark-grey background on hover */
+        }
+
+        :root{
+  --heading-font: 'Oswald', sans-serif;
+  --para-font: 'Open Sans', sans-serif;
+--heading-color: #212529;
+  --para-color: #212529;
+  --main-color: #000000;
+  --bg-main-color: #e88616;
+  --bg-main-color2: #554c53;
+  --bg-second-color: #e56e1f;
+}
+
+    </style>
+
+
+
+    <!-- header-section start -->
+    <header class="header-section">
+        <div class="header">
+            <div class="header-top-area">
+                <div class="container">
+                    <div class="header-top-content d-flex flex-wrap align-items-center justify-content-between">
+                        <div class="header-logo">
+                            <a class="site-logo site-title" href="index.html"><img src="assets/images/banner/logo.png" alt="site-logo"></a>
+                        </div>
+                        <div class="header-right d-flex flex-wrap align-items-center">
+                            <div class="header-social-area">
+                                <ul class="header-social">
+                                    <li><a href="https://www.facebook.com/gaming/SuperiorRPDK"><i class="fab fa-facebook-f"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="language-select-list d-flex flex-wrap">
+                                <div class="language-thumb">
+                                    <img src="assets/images/lang.png" alt="language">
+                                </div>
+                                <div class="language-select">
+                                    <select class="select-bar">
+                                        <option value="1">Sprog</option>
+                                        <option value="2">Dansk</option>
+                                        <option value="3">Engelsk</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="header-action">
+                                <a href="https://discord.gg/bUJQTnJNxM" class="cmn-btn">DISCORD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg p-0">
+                        <a class="site-logo site-title d-lg-none" href="index.html"><img src="assets/images/banner/logo.png" alt="site-logo"></a>
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="fas fa-bars"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav main-menu">
+                                <li class="active"><a href="index.html">Hjem</a></li>
+                                <li><a href="omos.html">Om os</a></li>
+                                <li><a href="regler.html">Regler</a></li>
+                                <li><a href="ansøgninger.html">Ansøgninger</a></li>
+                                <li><a href="donation.html">Donation</a></li>
+                                    </ul>
+                                </li>
+                            </ul>                 
+                        </div>
+                        <div class="header-search-bar">
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+    <!-- inner-banner-section start -->
+    <section class="inner-banner-section bg-overlay-black bg2 bg_img" data-background="assets/images/banner/inner.png">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <div class="inner-banner-content">
+                        <h2 class="title">Regler</h2>
+                        <div class="breadcrumb-area">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Regler</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- inner-banner-section end -->
+
+    <!-- blog-section start -->
+    <section class="blog-section bg2 pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-16">
+                    <div class="blog-item mb-30">
+                        <div class="blog-thumb">
+                        </div>
+                        <div class="rule-category">
+                            <div class="oaerror socialrp" id="generelle">
+                            <h5>SuperiorRP</h5>
+                            <p>Disse regler skal overholdes, brud på disse regler vil mindst medføre 1x advarsel og i værste tilfælde direkte udelukkelse af serveren.</p>
+                            <br>
+                            <p>Advarsler gives gennem TxAdmin og der gives ikke nødvendigvis en uddybet forklaring på den. Hvis du ønsker en uddybet forklaring på din advarsel kan du henvende dig i support. </p>
+                            <br>
+                            <h3>Generalt</h3>
+                            <p><strong>0.0</strong> : Scripts og tredjepartsprogrammer, eller andre programmer, kan medføre permanent udelukkelse af serveren.</p>
+                            <p>--> Dette vil sige bla. brug af “Modmenuer”, “fordele” m.m.</p>
+                            <p><strong>0.1</strong> : Bugs/glitches/fejl el. lign, skal vises til en staff, og bevidst ikke må udnyttes, dette kan medføre udelukkelse af serveren.</p>
+                            <p><strong>0.2</strong> : Staff på serveren vil på hvert en tid forbeholde sig retten til at kunne udvise spillere uanset, omstændighederne.</p>
+                            <br>
+                            <h3>Support</h3>
+                            <p><strong>0.0</strong> : Alt henvendelser i form af support eller hjælp skal foregå ved hjælp af vores support talekanaler på discorden.</p>
+                            </p>--> Dvs. at det ikke er tilladt at kontakte en staff in game og bed om hjælp der. Hvis dette sker vil det medføre 1x Advarsel og et kick</p>
+                            <p><strong>0.1</strong> : Spillere må ikke forlade en support case før det er godkendt af den ansvarlige staff. Hvis det brydes kan det medføre en udelukkelse.</p>
+                            <p><strong>0.2</strong> : I en support case skal alle holde en god tone, hvis ikke dette overholdes kan det medføre mute i support case og evt. advarsel.</p>
+                            <br>
+                            <h3>Generalle RP Regler</h3>
+                            <br>
+                            <h5>Metagaming</h5>
+                            <p><strong>0.0</strong> : Metagaming er på alle måder forbudt. Dvs der ikke må benyttes nogle former for ekstern kommunikation til at lave RP ingame.</p>
+                            <p>- Dette vil sige Discord, TeamsSpeak, Streams osv..</p>
+                            <p>- Det er tilladt at snakke i hyggesnak så længe inden RP videregives og at man muter når man er i RP!</p>
+                            <p>- Det er ikke tilladt at dele din skærm til flere personer. (f.eks i en kanal som hyggesnak.</p>
+                            <br>
+                            <h5>New Life Rule (NLR)</h5>
+                            <p><strong>0.0</strong> : NLR skal i et hvert tilfælde overholdes hvis din karakter dør</p>
+                            <p>- Dvs. at hvis du bliver slået bevidstløs, ved din karakter ikke noget om tidligere hændelser. </p>
+                            <p>- Hvis din karakter genoplives af en læge vil du kunne tyde lidt på hændelserne.</p>
+                            <br>
+                            <h5>FearRP</h5>
+                            <p><strong>0.0</strong> : FearRP tages meget seriøst og skal overholdes på alle tidspunkter!</p>
+                            <p>- Din karakter frygter altid for hans liv og skal altid så vidt muligt overleve fremfor at miste livet.</p>
+                            <p>- F.eks så kan din karakter ikke trække våben på en som allerede har trukket våben på dig.</p>
+                            <p>- Et andet eksempel kan være at du sidder i din bil og er under gunpoint. Her skal du også gå ud da andet vil medføre til død.</p>
+                            <p><strong>0.1</strong> : FearRP kan strække sig meget og skal vurderes ud fra situation og meget andet. Derfor er det den ansvarlige staff som har det sidste ord i en evt. support case.</p>
+                            <br>
+                            <h5>Powergaming</h5>
+                            <p><strong>0.0</strong> : Powergaming må aldrig udnyttes. Dette vil sige at du skal forsøge at holde din karakters adfærd realistisk, og ikke udnytte det faktum at det er et spil (Opfør dig som om det var virkeligheden).</p>
+                            <p><strong>0.1</strong> : Samtidig skal du give dine medspillere muligheder for at udvikle RP-scenarierne. Eksempler på dette kan være (men begrænser sig ikke til)</p>
+                            <p>- Misbrug af 3rd-person view i forbindelse med eks. skuddueller.</p>
+                            <p>- Kørsel på urealistisk groft terræn ift. køretøjet. Dette gælder også kørsel i metroer.</p>
+                            <p>- Røve andre ved at bede om "alle" deres penge, eller bede om overførsler til egen konto.</p>
+                            <p>- Svømme & snakke i tlf/radio, samt svømme urealistiske mængder.</p>
+                            <p>- Benytte vandet til at undslippe Politiet. Svømme ud i intetheden. Man kan godt svømme lidt, men husk din karakter er ikke OL svømmer.</p>
+                            <p>- Identificere karakterer ud fra stemme/accent hvis de er maskerede el. tydeligt forsøger at skjule deres identitet.</p>
+                            <p>- Benytte genoplivning/førstehjælp i tilfælde hvor døden er uundgåelig (Skud i hovedet m.m.).</p>
+                            <p>- Lovlige jobs må ikke røves.</p>
+                            <p>- Løbe med folk der bliver eskorteret, samt med folk der sidder på knæ. (Man må gerne kort løbe med dem, men længere løbeture ses som powergaming)</p>
+                            <br>
+                            <h5>RDM & VDM</h5>
+                            <p><strong>0.0</strong> : RDM & VDM er på ingen måder tilladt på serveren. Dvs. at andre karakterer ikke må dræbes uden opladende RP som har ledt op til denne hændelse. (RDM)</p>
+                            <p>- Køretøjer må ikke benyttes til at dræbe/skade andre spillere. (VDM)</p>
+                            <br>
+                            <h5>Copbait</h5>
+                            <p><strong>0.0</strong> : Combat logging er ikke tilladt og RP skal afsluttes inden du går ud af spillet. Efter et langt RP scenarie forventer vi at man bliver mindst 10 min ekstra på serveren inden man forlader.</p>
+                            <br>
+                            <h5>VoldtægtsRP</h5>
+                            <p><strong>0.0</strong> : VoldtægtsRP er på ingen måder tilladt og vil medføre direkte udelukkelse af serveren.</p>
+                            <p>- Dette gælder handlinger som “/me tager på hende/ham”, “/me piller ved hende/ham”</p>
+                            <p>- Scenarier hvor du tvinger tøj af en person eller til seksuelle handlinger</p>
+                            <br>
+                            <h5>Brug af soundboard</h5>
+                            <p>- Soundboards er kun tilladt hvis det har en real indelvelse i RP. Det vil sige ting som mekaniker lyde, læge lyde osv.</p>
+                            <p>- Random memes, høj musik og andet er ikke tilladt.</p>
+                            <p><strong>0.1</strong> : Hvis musik ønskes skal de ingame scripts bruges såsom vores “/boombox”.</p>
+                            <br>
+                            <h5>Greenzones</h5>
+                            <p>- Der er ingen greenzones på serveren. Det gør dog ikke at i har lov til at gøre hvad i vil overalt.</p>
+                            <p>- Det kræver stadig en gyldig RP grund at lave noget voldigt eller andet i en greenzone, har man ikke det vil det tages som RDM eller FailRP.</p>
+                            <br>
+                            <h3>Whitelisted Jobs</h3>
+                            <p><strong>0.0</strong> : Der må ikke udlevers eller stjæles jobpecifikke items.</p>
+                            <p>- Her er ting som repair kits, bandager, tjenestevåben og andet inkluderet.</p>
+                            <p>- Her kan man i stedet få en recept til medicin af en læge og købe det på apoteket. Man skal også ringe til en mekaniker istedet for at bruge deres items.</p>
+                            <p><strong>0.1</strong> : Efter ansættelse i et Whitelisted job forventes det at arbejdet bliver passet, og at dit RP omhandler dette.</p>
+                            <p>- Dette inkluderer også at passe jobbet korrekt, og at følge de protokoller som dit job indebærer.</p>
+                            <p>- Umotiveret korruption er derfor ikke tilladt i et Whitelisted job. Hvis dette sker medfører det 2x advarsler og direkte fyring</p>
+                            <p><strong>0.2</strong> : Tjenestemænd må ikke forstyrres i mens de er i et RP scenarie såfremt der ikke er grund til forstyring.</p>
+                            <p>- Dette inkluderer forstyrrelser af ambulanceredderes arbejde, indblanding i igangværende RP mellem borger og betjent (advokater er undtaget).</p>
+                            <p><strong>0.3</strong> : Det forventes at man benytter de rette køretøjer til udførelse af jeres arbejde.</p>
+                            <p>- Det vil sige at en mekaniker f.eks skal bruge en towtruck</p>
+                            <p>- En betjent skal bruge en certificeret politibil osv.</p>
+                            <p>- Køretøjet skal også følge samme regler som alle andre.</p>
+                            <p><strong>0.4</strong> : Man må ikke gå på de whitelisted jobs privatområder uden grund.</p>
+                            <p>- Det vil sige man ikke går ind på politistationen hvis ikke man skal noget derinde.</p>
+                            <p>- Det vil også sige at man ikke går ind på hospitalet og over skrænken.</p>
+                            <br>
+                            <h3>Røverier</h3>
+                            <p><strong>0.0</strong> : Røverier er tilladt.</p>
+                            <p>- Hvis man skal røve nogle skal det give mening for i RP, og det skal gøres ved modparten, kan RP vidre med det. Det skal på ingen måder gøres kun for at øje egem indkomst, men en bonus for længere rp.</p>
+                            <p>- Ser man et ulåst køretøj må man godt tage indholdet.</p>
+                            <p><strong>0.1</strong> : Forhandlinger kræves ved gidseltagning</p>
+                            <p>- Politiet går altid ud fra der er forhandlinger medmindre de hører andet, det skal derfor kommunikeres tydeligt.</p>
+                            <p><strong>0.2</strong> : Behandling af gidsler / kidnappede personer </p>
+                            <p>Det forventes, at man ikke henretter folk, blot for at dræbe dem. Der skal være reel RP grund til det. Det vil sige, hvis et gidsel har efterkommet alle anvisninger, men at man er færdig med at bruge dem, skal de ikke blot dræbes af den grund.</p>
+                            <p>Herudover findes der ikke "bedøvelse eller stoffer" som får en person til at glemme ting.</p>
+                            <p><strong>0.3</strong> : Man skal altid røve nationalbanken med pistoler som minimum.</p>
+                            <p>- Hvis dette ikke overholdes, vil det medføre advarsel, eller udelukkelse af serveren.</p>
+                            <p><strong>0.4</strong> : Forhandlinger skal være realistiske fra begge sider af røveriet.</p>
+                            <p>- Der skal på intet tidspunkt kræves politibiler/fly fra politiet.</p>
+                            <p>- Der skal på intet tidspunkt kræves politi våben/udstyr fra politiet</p>
+                            <p>- Der må ikke kræves mere end 100.000,- DKK for ét gidsel. (50.000,- DKK pr. yderligere).</p>
+                            <p><strong>0.5</strong> : Der må godt bruges Firma biler/Job biler de forskellige røverier, eller andre scenarier.</p>
+                            <p>- Der skal dog være en god RP grund, til du vil have fat i et køretøj.</p>
+                            <p><strong>0.6</strong> : Der må max være 4 medlemmer til et butiksrøveri (ekskl. gidsler)</p>
+                            <p>- Alle medlemmer til røveriet behøver ikke at være i området.</p>
+                            <p>- De må godt hjælpe med at komme væk, eller holde udkig, andre steder end ved lokationen.</p>
+                            <p><strong>0.7</strong> : Der må max være 8 medlemmer til et bankrøveri (ekskl. gidsler)</p>
+                            <p>- Alle medlemmer til røveriet behøver ikke at være i området.</p>
+                            <p>- De må godt hjælpe med at komme væk, eller holde udkig, andre steder end ved lokationen.</p>
+                            <br>
+                            <p><strong>0.8</strong> : Der skal være 4 på af det whitelistede job før man må kidnappe dem.</p>
+                            <br>
+                            <h3>RP Som Barn</h3>
+                            <p><strong>0.0</strong> : For at blive barn kræver det skriftlig tilladelse af en fra ledelsen</p>
+                            <p><strong>0.1</strong> : Da der er begrænset PED modeller må 2 personer ikke have den samme.</p>
+                            <p><strong>0.2</strong> : Hvis du RP'er som barn skal du tænke og lyd som et barn i RP.</p>
+                            <p><strong>0.3</strong> : Det er ikke tilladt som barn at bære et skudvåben eller stikvåben da det ikke er realistisk.</p>
+                            <p><strong>0.4</strong> : Det er ikke tilladt som barn at køre, flyve eller sejle i nogen former for køretøjer</p>
+                            <p><strong>0.5</strong> : Teenager modeller kan køre på scootere og bære stikvåben, husk dog stadig at være realistisk.</p>
+                            <br>
+                            <h3>RP Som Dyr</h3>
+                            <p><strong>0.0</strong> : Kommunikation som dyr skal foregår med dyrestemme eller /me handlinger.</p>
+                            <p><strong>0.1</strong> : Hunde kan ikke give informationer, medmindre det er ting som f.eks /me er sulten, /me skadet</p>
+                            <p><strong>0.2</strong> : Hvis du er ansat ved politihund skal du bære Politi hunde-vest.</p>
+                            <p><strong>0.3</strong> : En hund kan ikke køre eller åbne døre, derfor kræver det at en anden RP spiller tager sig af dig.</p>
+                            <br>
+                            <h3>Diverse</h3>
+                            <p><strong>0.0</strong> : Man må ikke tage et køretøj ud af opbevaring, hvis man har mistet køretøjet i RP eller andet.</p>
+                            <p>Man må KUN tage et køretøj ud af opbevaring, hvis man er 100% sikker på at andre ikke kan komme til det (F.eks. på havets bund), eller efter et server restart.</p>
+                            <p><strong>0.1</strong> : Man skal huske at bruge sin sunde fornuft, og gøre tingene så realistisk som muligt.</p>
+                            <p>Du dræber ikke bare politiet så snart man bliver livet op af lægen eller lignende, du bruger RP, sammen med lægen og ikke andet.</p>
+                            <br>
+                            <span class="blog-date">Sidst Opdateret - 15/04/2022</span>
+                            </div>
+                            </div>
+                                <div class="blog-left-area d-flex flex-wrap">
+                                    <div class="blog-footer-thumb-area d-flex flex-wrap">
+                                        <div class="blog-footer-thumb">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-right-area">
+                                    <div class="blog-right-btn">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="YR10 CyberSecurity game">
+        <meta name="author" content="Gabriel Pavlov">
+        <title>CyberSafe - Cyber Quiz</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+ 
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-primary" role="alert">
+                        <p> Du arbejdede på rapporten, som din chef havde givet dig som opgave, da der pludselig dukkede en meddelelse op</p>
+                        <p> Den oplyste, at din firewall har sårbarheder og skal opdateres, find ud af hvilken opdatering der er sikrest</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="#">Statistik over firmaet</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link save-report" href="#">Gemt... 1 sek siden</a>
+                            </li>
+                            <!-- li class="nav-item">
+                              <a class="nav-link share-report" href="#">Share</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link delete-report" href="#">Delete</a>
+                            </li -->
+                          </ul>
+                          <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Søg" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Søg</button>
+                          </form>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+
+            <div class= "row">
+                <div class="col-8">
+                    <div><p>&nbsp;</p></div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 22%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Glæde</div>
+                      </div>
+                      <div><p>&nbsp;</p></div>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 59%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Produktivitet</div>
+                      </div>
+                      <div><p>&nbsp;</p></div>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 79%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"> Virusinficerede Computere</div>
+                      </div>
+                      <div><p>&nbsp;</p></div>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"> Ordre i dag</div>
+                      </div>
+                      <div><p>&nbsp;</p></div>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 24%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Tilfredse Kunder</div>
+                      </div>
+                </div>
+                <div class="col-4 toasts">
+                    <!-- toasts go here from JS -->
+                    
+                </div>
+            </div> 
+            
+        </div>
+            <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+            <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+            <script>
+
+                $(document).ready(function() {
+
+                    var _boss = 'Andrew Reckless';
+                    var _ceo = 'John Ruthless';
+
+                    var _updateWasInstalled = false;
+                    // var _sharedBadReport = false; 
+                    // var _reportWasSent = false;
+                    // var _reportWasDeleted = false; 
+                    var _toastCnt = 10;  
+
+                    var createToast = function(clazz, subject, body) {
+                        $('.toasts').append(
+                        '<div class="toast ' + clazz + '" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">' + 
+                                '<div class="toast-header">' + 
+                                '<strong class="mr-auto">' + subject + '</strong>' + 
+                                '<small>' + new Date().toTimeString().slice(0,8) + '</small>' + 
+                                '<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">' + 
+                                    '<span aria-hidden="true">&times;</span>' + 
+                                '</button>' + 
+                                '</div>' + 
+                                '<div class="toast-body">' + body + 
+                                '</div>' + 
+                            '</div>');
+                            $('.toast' + _toastCnt).toast('show');
+                            _toastCnt++;
+                    }
+
+                    var updateStoryLine = function(text) {
+                        $('.storyline').html(text);
+                    }
+
+                    var _t1 = _toastCnt
+                        createToast('toast' + _t1, 'WindowsSystem : Sårbarheder opdaget', ' Windows firewall har registreret sårbarheder på din enhed.' + 
+                      ' Opdater venligst Windows firewall for at forhindre skade på systemet.<br/>' + 
+                      '<a class="btn btn-secondary" href="page105.html">Opdater Ikke</a> <a class="btn btn-secondary install-update" href="#">Installer opdatering</a>');
+            
+                      setTimeout(function() {
+                            createToast('toast' + _toastCnt, 'VindueSystem : Sårbarheder opdaget!',   
+                            'Dit system er sårbart, klik på linket nedenfor, og indtast din adgangskode for at installere opdateringer.<br/>' + 
+                      '<a class="btn btn-secondary" href="page106.html">Installer opdatering</a>');
+
+                        }, 2000);
+
+                    $('.install-update').click(function() {
+                        _updateWasInstalled = true;
+
+                        setTimeout(function() {
+                            createToast('toast' + _toastCnt, 'WindowsSystem : Opdateringen installeret!',   
+                            'Opdateringen blev installeret. Din enhed er nu beskyttet igen');
+
+                            createToast('toast' + _toastCnt, 'CyberSafe : Godt klaret Rasmus!',   
+                            'Godt gået Rasmus, du har overlevet en dag mere på internettet!<br/><a class="btn btn-success" href="page099.html">Afslut</a>');
+
+
+                        }, 2000);
+  
+                        
+                    });
+
+                });
+            </script>
+    </body>
+</html>

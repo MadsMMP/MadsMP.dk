@@ -1,0 +1,82 @@
+a{
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+    
+    }
+body1{
+margin-left: 300px;
+}
+
+
+
+h1,h2,p,h3{
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif; font-size: 125% ;
+    margin-right: 350px;margin-left: 350px;"
+}
+
+
+body{
+    background-image: url("assets/cybersafebackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    
+}
+
+img{
+
+margin-right: 300px;margin-left: 300px;
+}
+
+
+
+hr{
+
+    width: 1354px;
+}
+
+p{
+line-height: 175%;
+
+}
+div, iframe {
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+iframe {
+    display: block;
+    border-style:none;
+}
+
+.button {
+    background-color: cyan;
+    border: none;
+    color: #242424;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: table-caption;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+ html {
+    overflow-y:   scroll;
+  }
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+  }
+
+
+    
+
+
+
+
